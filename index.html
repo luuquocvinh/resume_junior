@@ -4,14 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+
+    <link href="timelinev.css" rel="stylesheet">
+    <style>
     <title>Hello, world!</title>
     <style>
         body *{
-            /*border: 1px solid rgba(0,122,0,.2)*/
+            /*background-color: white;*/
         }
         .picture{
             text-align: center;
             margin:auto
+        }
+        .information{
+            padding:10px
         }
         .information,.header-edu,.header-exp,.header-ref{
             background: #f2f2ee;
@@ -29,12 +35,65 @@
         .edu .row{
             margin-top:10px
         }
+        .skills,.contact,.reference,.personal{
+            border-bottom:1px solid #f2f2ee;
+            padding:10px 0px
+        }
+        .row.middle-exp{
+            margin:20px 0px
+        }
+        div.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        }
+
+    #timeline {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    #timeline div {
+        height: 231px;
+    }
+
+    #timeline div .date {
+        border-right: 1px rgba(33, 150, 243, 0.4) solid;
+        text-align: center
+    }
+
+    #timeline div .date:before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        background: #2196F3;
+        position: absolute;
+        left: 99.2%;
+        top: 88px;
+        border-radius: 100%;
+    }
+
+    #timeline div .date h2 {
+        margin: 42px 28px 0;
+        text-align: center;
+        border: 2px solid black;
+        color: #2196F3;
+    }
+
+    #timeline div .text p {
+        width: 100%;
+    }
+    #timeline div .text h3 {
+        width: 100%;
+        color: #2196F3;
+    }
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="row information">
-            <div class="col-sm-2 picture">
+            <div class="col-sm-2 picture sticky">
                 <img src="https://i.postimg.cc/WpGnC8Cq/29313045-1905621932783704-3633724408111629409-n.jpg" width="100%">
             </div>
             <div class="col-sm-10">
@@ -48,25 +107,25 @@
         </div>
         <div class="row">
             <div class="col-sm-2 colLeft">
-                <div class="container">
+                <div class="container sticky">
                     <div class="row contact">
                         <div class="container">
-                        <div class="row">
-                            <i class='fas fa-map-marker-alt' style="color:#2196F3"></i>
-                            <p>Ho Chi Minh</p>
-                        </div>
-                        <div class="row">
-                            <i class='fas fa-phone' style="color:#2196F3"></i>
-                            <p>097xxxx233</p>
-                        </div>
-                        <div class="row">
-                            <i class='fas fa-envelope' style="color:#2196F3"></i>
-                            <p>cmndxxx@xxx.com</p>
-                        </div>
-                        <div class="row">
-                            <i class='fab fa-invision' style="color:#2196F3"></i>
-                            <p>Luu Quoc Vinh</p>
-                        </div>
+                            <div class="row">
+                                <i class='fas fa-map-marker-alt' style="color:#2196F3"></i>
+                                <p>Ho Chi Minh</p>
+                            </div>
+                            <div class="row">
+                                <i class='fas fa-phone' style="color:#2196F3"></i>
+                                <p>097xxxx233</p>
+                            </div>
+                            <div class="row">
+                                <i class='fas fa-envelope' style="color:#2196F3"></i>
+                                <p>cmndxxx@xxx.com</p>
+                            </div>
+                            <div class="row">
+                                <i class='fab fa-invision' style="color:#2196F3"></i>
+                                <p>Luu Quoc Vinh</p>
+                            </div>
                         </div>
                     </div>
                     <div class="row skills">
@@ -139,45 +198,45 @@
                                 <div class="col-sm-10"><h4>EXPERIENCE</h4></div>
                                 <div class="col-sm-2" style="text-align: right"><i class='fas fa-book-reader'></i></div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="container">
-                                        <div class="row">FREELANCER</div>
-                                        <div class="row">time</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="container">
-                                        <div class="row">WEBMARKETING</div>
-                                        <div class="row">detail</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="container">
-                                        <div class="row">SUBQUEST</div>
-                                        <div class="row">time</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="container">
-                                        <div class="row">PROJECT</div>
-                                        <div class="row">detail</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="container">
-                                        <div class="row">DREAMSWAP</div>
-                                        <div class="row">time</div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8">
-                                    <div class="container">
-                                        <div class="row">PROJECT</div>
-                                        <div class="row">detail</div>
+                            <div class="row middle-exp">
+                                <div class="xxx">
+                                    <div id="timeline" class="row ">
+                                        <div class="timelineCont col-12">
+                                            <div class="row">
+                                                <div class="date col-5">
+                                                    <h4>FREE LANCER</h4>
+                                                    <h2>2018-2020</h2>
+                                                </div>
+                                                <div class="text col-7">
+                                                    <h3>WEB DEVELOPER</h3>
+                                                    <p>Aliquam fermentum vestibulum orci interdum auctor. Nunc sodales risus ut elit sodales ultrices. Donec a porttitor metus, non rhoncus eros.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timelineCont col-12">
+                                            <div class="row">
+                                                <div class="date col-5">
+                                                    <h4>SUBQUEST</h4>
+                                                    <h2>2015-2018</h2>
+                                                </div>
+                                                <div class="text col-7">
+                                                    <h3>PROJECT MANAGER</h3>
+                                                    <p>Aenean eget dui tempor, rutrum ligula sit amet, vulputate magna. Ut quis eros feugiat, ullamcorper odio et, pellentesque leo. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timelineCont col-12">
+                                            <div class="row">
+                                                <div class="date col-5">
+                                                    <h4>DREAM SWAP</h4>
+                                                    <h2>2013-2015</h2>
+                                                </div>
+                                                <div class="text col-7">
+                                                    <h3>BUILDING DESIGNER</h3>
+                                                    <p>Aenean eget dui tempor, rutrum ligula sit amet, vulputate magna. Ut quis eros feugiat, ullamcorper odio et, pellentesque leo. </p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
